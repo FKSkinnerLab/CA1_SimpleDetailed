@@ -1,1 +1,1 @@
-# CA1_Theta-Paper
+# CA1_SimpleDetailed
