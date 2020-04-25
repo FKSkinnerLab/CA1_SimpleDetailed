@@ -4,21 +4,25 @@ Melisa Gumus - May 2018
 
 Languages: MATLAB
 
+<img src="https://github.com/FKSkinnerLab/CA1_SimpleDetailed/blob/master/SimpleDetailedMovie.gif" height="300px" width="500px" >
+
 ## Summary
 This github repository includes complete scripts for comparing the simple (Ferguson et al., 2017) and the detailed (Beziare et al., 2016) microcircuit models of hippocampus CA1 in terms of theta rhythms generation. For more details, please see Chatzikalymniou and colleagues (2020).
 
-This repository includes several folders; each contains scripts for a specific purpose and calculations.
+This repository includes several folders listed below; each contains scripts for a specific purpose and calculations. 
 
 1. **Excitatory_Inhibitory_Ratios**
-Excitatory and inhibitory currents, that each cell receives (specifically, PYR, BC, BiC and AAC) in the detailed model,     are obtained using SimTracker and Network Clamp tool (Bezaire et al., 2016). Each simulation was run for 1000 msec. Each scripts helps you calcualte the followings (Please note that this example is based on PYR cells onlys , but the same concept applies to other cells/scripts):
 
-Find Mean EPSCs or IPSCs and standard deviation from each cell (e.g. BC, BiC, AAC separately) or combination of cells (e.g. BC and BiC together) onto PYR cells.
-Identify the peaks in EPSCs and IPSCs onto PYR, and find the mean and stardard deviation.
-Calculate the EPSCs/IPSCs ratios on PYR cells.
-Voltage recordings
-IPSCs and EPSCs in detailed model obtained from Network Clamp are saved as .dat files and can be found in /Excitatory_Inhibitory_Ratios/Network_Clamp_Results/mytrace'cellID'syns.dat. The voltage recordings for each cell can be found in /Excitatory_Inhibitory_Ratios/Network_Clamp_Results/mytrace'cellID'soma.dat
+     Excitatory and inhibitory currents, that each cell receives (specifically, PYR, BC, BiC and AAC) in the detailed model, are obtained using SimTracker and Network Clamp tool (Bezaire et al., 2016). Each simulation was run for 1000 msec. Each scripts helps you calcualte the followings (Please note that this example is based on PYR cells onlys , but the same concept applies to other cells/scripts):
 
-2. **Anton's stuff
+     1. Find Mean EPSCs or IPSCs and standard deviation from each cell (e.g. BC, BiC, AAC separately) or combination of cells (e.g. BC and BiC together) onto PYR cells.
+     2. Identify the peaks in EPSCs and IPSCs onto PYR, and find the mean and stardard deviation.
+     3. Calculate the EPSCs/IPSCs ratios on PYR cells.
+     4. Voltage recordings
+
+_**Note:** IPSCs and EPSCs in detailed model obtained from Network Clamp are saved as .dat files and can be found in /Excitatory_Inhibitory_Ratios/Network_Clamp_Results/mytrace'cellID'syns.dat. The voltage recordings for each cell can be found in /Excitatory_Inhibitory_Ratios/Network_Clamp_Results/mytrace'cellID'soma.dat_
+
+2. **Folder name for Anton's stuff**
 
 
 ## Status ##
