@@ -1,0 +1,16 @@
+Prior to creating cells	19.770000	47898656	47898656
+After creating cells	19.790000	48732816	834160
+Defined bistratifiedcell to bistratifiedcell conns	19.790000	56944224	8211408
+Defined cckcell to bistratifiedcell conns	19.820000	61860784	4916560
+Defined ivycell to bistratifiedcell conns	19.840000	67043616	5182832
+Defined ngfcell to bistratifiedcell conns	19.900000	73278304	6234688
+Defined olmcell to bistratifiedcell conns	19.910000	73519504	241200
+Defined pyramidalcell to bistratifiedcell conns	19.940000	113815104	40295600
+Defined pvbasketcell to bistratifiedcell conns	42.940000	198141136	84326032
+Defined scacell to bistratifiedcell conns	43.000000	206735440	8594304
+Defined ca3cell to bistratifiedcell conns	43.080000	820589808	613854368
+Defined eccell to bistratifiedcell conns	218.230000	2127285664	1306695856
+After connecting cells	238.100000	-9223372036854775808	-9223372036854775808
+After defining stimulation	250.250000	-9223372036854775808	1116160
+Before running simulation	250.330000	-9223372036854775808	3100672
+After running simulation	272.670000	-9223372036854775808	1366175744

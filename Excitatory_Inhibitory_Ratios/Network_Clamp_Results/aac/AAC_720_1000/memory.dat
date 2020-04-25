@@ -1,0 +1,16 @@
+Prior to creating cells	20.390000	47898384	47898384
+After creating cells	20.400000	48732608	834224
+Defined bistratifiedcell to axoaxoniccell conns	20.410000	56340176	7607568
+Defined cckcell to axoaxoniccell conns	20.420000	61398704	5058528
+Defined ivycell to axoaxoniccell conns	20.440000	66154672	4755968
+Defined ngfcell to axoaxoniccell conns	20.480000	72923312	6768640
+Defined olmcell to axoaxoniccell conns	20.490000	73200016	276704
+Defined pyramidalcell to axoaxoniccell conns	20.520000	86371520	13171504
+Defined pvbasketcell to axoaxoniccell conns	26.020000	130554944	44183424
+Defined scacell to axoaxoniccell conns	26.060000	140512672	9957728
+Defined ca3cell to axoaxoniccell conns	26.100000	435204048	294691376
+Defined eccell to axoaxoniccell conns	111.220000	1527517680	1092313632
+After connecting cells	124.350000	1684987936	157470256
+After defining stimulation	136.540000	1685578544	590608
+Before running simulation	136.600000	1688679360	3100816
+After running simulation	152.860000	-9223372036854775808	-9223372036854775808

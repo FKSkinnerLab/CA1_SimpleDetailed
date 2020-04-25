@@ -1,0 +1,17 @@
+Prior to creating cells	19.630000	44969824	44969824
+After creating cells	19.770000	47550432	2580608
+Defined axoaxoniccell to pyramidalcell conns	19.810000	158622480	111072048
+Defined bistratifiedcell to pyramidalcell conns	19.830000	220505200	61882720
+Defined cckcell to pyramidalcell conns	19.860000	268637024	48131824
+Defined ivycell to pyramidalcell conns	19.940000	706486512	437849488
+Defined ngfcell to pyramidalcell conns	20.000000	301242048	-405244464
+Defined olmcell to pyramidalcell conns	20.020000	216110224	-85131824
+Defined pyramidalcell to pyramidalcell conns	20.730000	-9223372036854775808	-9223372036854775808
+Defined pvbasketcell to pyramidalcell conns	21.350000	417134368	-9223372036854775808
+Defined scacell to pyramidalcell conns	21.380000	198397056	-218737312
+Defined ca3cell to pyramidalcell conns	27.380000	-9223372036854775808	-9223372036854775808
+Defined eccell to pyramidalcell conns	170.630000	1504592304	-9223372036854775808
+After connecting cells	190.020000	1925553856	420961552
+After defining stimulation	241.040000	1926668768	1114912
+Before running simulation	242.590000	1928861296	2192528
+After running simulation	316.670000	-9223372036854775808	-9223372036854775808
