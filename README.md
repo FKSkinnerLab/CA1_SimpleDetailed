@@ -1,4 +1,4 @@
-# Linking Simple and Detailed Microcircuit Models of Hippocampus CA1
+# Linking Simple and Detailed Microcircuit Models of Hippocampal CA1
 
 Melisa Gumus - May 2018 
 
