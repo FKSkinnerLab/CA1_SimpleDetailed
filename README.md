@@ -20,7 +20,7 @@ This repository includes several folders listed below; each contains scripts for
      3. Calculate the EPSCs/IPSCs ratios on PYR cells.
      4. Voltage recordings
 
-_**Note:** IPSCs and EPSCs in detailed model obtained from Network Clamp are saved as .dat files and can be found in /Excitatory_Inhibitory_Ratios/Network_Clamp_Results/mytrace'cellID'syns.dat. The voltage recordings for each cell can be found in /Excitatory_Inhibitory_Ratios/Network_Clamp_Results/mytrace'cellID'soma.dat_
+_**Note:** IPSCs and EPSCs in detailed model obtained from Network Clamp are saved as .dat files and can be found in /Excitatory_Inhibitory_Ratios/Network_Clamp_Results/mytrace_'cell_ID'_syns.dat. The voltage recordings for each cell can be found in /Excitatory_Inhibitory_Ratios/Network_Clamp_Results/mytrace_'cell_ID'_soma.dat_
 
 2. **Folder name for Anton's stuff**
 
