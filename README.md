@@ -25,6 +25,7 @@ _**Note:** IPSCs and EPSCs in detailed model obtained from Network Clamp are sav
 2. **Folder name for Anton's stuff**
 
 
+
 ## Status ##
 This project is completed, and the relevant publication (Chatzikalymniou et al., 2020) is listed below.
 
