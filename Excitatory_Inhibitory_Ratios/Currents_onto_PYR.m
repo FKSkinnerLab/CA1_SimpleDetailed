@@ -8,8 +8,9 @@ clear all
 close all
 clc
 
-f = fullfile('/Users','melisagumus','Documents',...
-    'labs', 'skinnerlab','netclamp_results','pyr',{...
+f = fullfile('~',... # Change this path accordingly 
+    'CA1_SimpleDetailed','Excitatory_Inhibitory_Ratios',...
+    'Network_Clamp_Results','pyr',{...
     'pyr_29097_1000';...
     'pyr_36884_1000';...
     'pyr_52458_1000';...
@@ -837,14 +838,14 @@ for k = 1:1:15
     t.Position = [0 0 1 1]; % (0,0) is the point of the bottom-left corner of the textbox,
     t.HorizontalAlignment = 'center'; % This places the title in the center of the textbox horizontally
     t.VerticalAlignment = 'top'; % This places the title in the top of the textbox vertically
-    t.String = ['Peak Detection on EPSCs from PYRs, ECs, CA3s on PYRs'];
+    t.String = ['Peak Detection on EPSCs from PYR, EC, and CA3 on PYR'];
     subplot(5,3,k);
     [pks, locs] = findpeaks(-all_epsc(:,k),'MinPeakDistance',3000); % peak detection
     findpeaks(-all_epsc(:,k),'MinPeakDistance',3000);
     hold on; 
     title (['PYR Number #' num2str(k)])
-    xlabel('Time (1/40 ms)')
-    ylabel('epsc')
+    xlabel('Time (msec)')
+    ylabel('EPSC')
     temp_cur = all_epsc(:,k);
     allrows = (1:40000)';
     notpeak = setdiff(allrows,locs);
@@ -892,7 +893,7 @@ hold on;
 errorbar(x,EPSC_all_together_mean,EPSC_all_std_together,'b','LineStyle','none')
 title('Mean Peak EPSCs from All Excitatory Cells onto BiCs','FontSize',15,'FontWeight','bold')
 
-%% Excitatory/Inhibitory Ratios on PYR Cells
+%% Excitatory/Inhibitory Ratios on PYR Cells without CA3/EC
 Ratios_PYR = [];
 E_I_AAC = abs(EPSC(1,:)./IPSC_AAC(1,:))';
 E_I_BC = abs(EPSC(1,:)./IPSC_BC(1,:))';
@@ -903,7 +904,7 @@ E_I_BiC_BC = abs(EPSC(1,:)./IPSC_BiC_BC(1,:))';
 E_I_all = abs(EPSC(1,:)./IPSC_all(1,:))';
 E_I_all_together = abs(EPSC(1,:)./IPSC_all_together(1,:))';
 
-%%
+%% Excitatory/Inhibitory Ratios on PYR Cells with CA3/EC
 E_I_AAC_with_ca3 = abs(EPSC_all_together(1,:)./IPSC_AAC(1,:))';
 E_I_BC_with_ca3 = abs(EPSC_all_together(1,:)./IPSC_BC(1,:))';
 E_I_BiC_with_ca3 = abs(EPSC_all_together(1,:)./IPSC_BiC(1,:))';
@@ -914,17 +915,16 @@ E_I_all_with_ca3 = abs(EPSC_all_together(1,:)./IPSC_all(1,:))';
 E_I_all_together_with_ca3 = abs(EPSC_all_together(1,:)./IPSC_all_together(1,:))';
 
 
-%% E/I Ratio - Table 
+%% E/I Ratio - Table without CA3/EC
 pyr = 1:15;
 Ratios_PYR = [pyr' E_I_AAC E_I_BC E_I_BiC E_I_AAC_BC E_I_BiC_BC E_I_all E_I_all_together];
 Ratios_PYR = array2table(Ratios_PYR);
-%%
 Ratios_PYR.Properties.VariableNames = {'pyr_no' 'Ratio_AAC_on_PYR'...
     'Ratio_BC_on_PYR' 'Ratio_BiC_on_PYR' ...
     'Ratio_AAC_BC_on_PYR'...
     'Ratio_BiC_BC_on_PYR'...
     'Ratio_AAC_BiC_BC_on_PYR' 'All_ipsc_onto_PYR'};
-%%
+%% E/I Ratio - Table with CA3/EC
 pyr = 1:15;
 Ratios_PYR_with_ca3 = [pyr' E_I_AAC_with_ca3 E_I_BC_with_ca3 ...
     E_I_BiC_with_ca3 E_I_AAC_BC_with_ca3 E_I_BiC_BC_with_ca3 E_I_all_with_ca3...
@@ -951,7 +951,7 @@ uitable('Data',Ratios_PYR{:,:},...
     'Units', 'Normalized',...
     'Position',[0, 0, 1, 1]);
 
-%% With CA3
+%% With CA3/EC
 uitable('Data',Ratios_PYR_with_ca3{:,:},...
     'RowName', [],...
     'ColumnName',{'Pyramidal Cell Number',...
@@ -965,10 +965,11 @@ uitable('Data',Ratios_PYR_with_ca3{:,:},...
     'Units', 'Normalized',...
     'Position',[0, 0, 1, 1]);
 
-%% Read in the current files
+%% Read in the files for voltage recordings
 
-g = fullfile('/Users','melisagumus','Documents',...
-    'labs', 'skinnerlab','netclamp_results','pyr',{...
+g = fullfile('~',... # Change this path accordingly 
+    'CA1_SimpleDetailed','Excitatory_Inhibitory_Ratios',...
+    'Network_Clamp_Results','pyr',{...
     'pyr_29097_1000';...
     'pyr_36884_1000';...
     'pyr_52458_1000';...
@@ -1025,7 +1026,7 @@ for i = 1:1:15
     hold on
     title (['PYR Number #' num2str(i)]) 
     xlabel('Time (msec)')
-    ylabel('Voltage (mV)')
+    ylabel('Voltage')
 end 
 
 %%

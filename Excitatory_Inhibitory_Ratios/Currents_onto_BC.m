@@ -8,7 +8,9 @@ clear all
 close all
 clc
 
-f = fullfile('/Users','melisagumus','Documents','other','pvbasket',{...
+f = fullfile('~',... # Change this path accordingly 
+    'CA1_SimpleDetailed','Excitatory_Inhibitory_Ratios',...
+    'Network_Clamp_Results','pvbasket',{...
     'pvbasket_332810_1000';...
     'pvbasket_333500_1000';...
     'pvbasket_333776_1000';...
@@ -82,13 +84,13 @@ for m = 1:15  % number of cells
             t.Position = [0 0 1 1]; % (0,0) is the point of the bottom-left corner of the textbox,
             t.HorizontalAlignment = 'center'; % This places the title in the center of the textbox horizontally
             t.VerticalAlignment = 'top'; % This places the title in the top of the textbox vertically
-            t.String = ['Peak Detection on IPSCs from BiCs onto BCs'];
+            t.String = ['Peak Detection on IPSCs from BiC onto BC'];
             subplot(5,3,m);
             [pks, locs] = findpeaks(data{m}(:,k),'MinPeakDistance',3000); % peak detection
             findpeaks(data{m}(:,k),'MinPeakDistance',3000);
             hold on; 
             title (['BC Number #' num2str(m)])
-            xlabel('Time')
+            xlabel('Time (msec)')
             ylabel('IPSC')
             temp_BiC = data{m}(:,k);
             allrows = (1:40000)';
@@ -105,7 +107,7 @@ for m = 1:15  % number of cells
             t.Position = [0 0 1 1]; % (0,0) is the point of the bottom-left corner of the textbox,
             t.HorizontalAlignment = 'center'; % This places the title in the center of the textbox horizontally
             t.VerticalAlignment = 'top'; % This places the title in the top of the textbox vertically
-            t.String = ['Peak Detection on EPSCs from PYR onto BCs'];
+            t.String = ['Peak Detection on EPSCs from PYR onto BC'];
             subplot(5,3,m);
             [pks, locs] = findpeaks(-data{m}(:,k),'MinPeakDistance',3000); % peak detection
             findpeaks(-data{m}(:,k),'MinPeakDistance',3000);
@@ -128,7 +130,7 @@ for m = 1:15  % number of cells
             t.Position = [0 0 1 1]; % (0,0) is the point of the bottom-left corner of the textbox,
             t.HorizontalAlignment = 'center'; % This places the title in the center of the textbox horizontally
             t.VerticalAlignment = 'top'; % This places the title in the top of the textbox vertically
-            t.String = ['Peak Detection on IPSCs from BCs onto BCs'];
+            t.String = ['Peak Detection on IPSCs from BC onto BC'];
             subplot(5,3,m);
             [pks, locs] = findpeaks(data{m}(:,k),'MinPeakDistance',3000); % peak detection
             findpeaks(data{m}(:,k),'MinPeakDistance',3000);
@@ -630,14 +632,14 @@ for k = 1:1:15
     t.Position = [0 0 1 1]; % (0,0) is the point of the bottom-left corner of the textbox,
     t.HorizontalAlignment = 'center'; % This places the title in the center of the textbox horizontally
     t.VerticalAlignment = 'top'; % This places the title in the top of the textbox vertically
-    t.String = ['Peak Detection on EPSCs from PYRs, CA3s on BCs'];
+    t.String = ['Peak Detection on EPSCs from PYR, CA3 on BC'];
     subplot(5,3,k);
     [pks, locs] = findpeaks(-all_epsc(:,k),'MinPeakDistance',3000); % peak detection
     findpeaks(-all_epsc(:,k),'MinPeakDistance',3000);
     hold on; 
     title (['BC Number #' num2str(k)])
-    xlabel('Time (1/40 ms)')
-    ylabel('epsc')
+    xlabel('Time (msec)')
+    ylabel('EPSC')
     temp_cur = all_epsc(:,k);
     allrows = (1:40000)';
     notpeak = setdiff(allrows,locs);
@@ -692,27 +694,27 @@ fig = uitable('Data',EPSC_all_together_table{:,:},...
     'Units','Normalized',...
     'Position',[0, 0, 1, 1]);
 
-%% Excitatory/Inhibitory Ratios on BCs
+%% Excitatory/Inhibitory Ratios on BCs without CA3/EC
 Ratios_BC = [];
 E_I_BC = abs(EPSC(1,:)./IPSC_BC(1,:))';
 E_I_BiC = abs(EPSC(1,:)./IPSC_BiC(1,:))';
 E_I_all = abs(EPSC(1,:)./IPSC_all(1,:))';
 E_I_all_together = abs(EPSC(1,:)./IPSC_all_together(1,:))';
-%%
+%% Excitatory/Inhibitory Ratios on BCs with CA3/EC
 Ratios_BC_with_ca = [];
 E_I_BC_with_ca = abs(EPSC_all_together(1,:)./IPSC_BC(1,:))';
 E_I_BiC_with_ca = abs(EPSC_all_together(1,:)./IPSC_BiC(1,:))';
 E_I_all_with_ca = abs(EPSC_all_together(1,:)./IPSC_all(1,:))';
 E_I_all_together_with_ca = abs(EPSC_all_together(1,:)./IPSC_all_together(1,:))';
 
-%% E/I Ratio - Table 
+%% E/I Ratio - Table without CA3/EC
 bc = 1:15;
 Ratios_BC = [Ratios_BC bc' E_I_BC E_I_BiC E_I_all E_I_all_together];
 Ratios_BC = array2table(Ratios_BC);
  
 Ratios_BC.Properties.VariableNames = {'BC_no' 'Ratio_BC_on_BC'...
     'Ratio_BiC_on_BC' 'Ratio_BC_BiC_on_BC' 'All_ipsc_onto_BC'};
-%%
+%% E/I Ratio - Table wit CA3/EC
 bc = 1:15;
 Ratios_BC_with_ca = [Ratios_BC_with_ca bc' E_I_BC_with_ca E_I_BiC_with_ca E_I_all_with_ca E_I_all_together_with_ca];
 Ratios_BC_with_ca = array2table(Ratios_BC_with_ca);
@@ -720,7 +722,7 @@ Ratios_BC_with_ca = array2table(Ratios_BC_with_ca);
 Ratios_BC_with_ca.Properties.VariableNames = {'BC_no' 'Ratio_BC_on_BC'...
     'Ratio_BiC_on_BC' 'Ratio_BC_BiC_on_BC' 'All_ipsc_onto_BC'};
 
-%% Display the E/I table as a figure
+%% Display the E/I table as a figure without CA3/EC
 
 uitable('Data',Ratios_BC{:,:},...
     'RowName', [],...
@@ -731,7 +733,7 @@ uitable('Data',Ratios_BC{:,:},...
     'All Inhibitory Neurons to BC'},...
     'Units', 'Normalized',...
     'Position',[0, 0, 1, 1]);
-%%
+%% Display the E/I table as a figure with CA3/EC
 uitable('Data',Ratios_BC_with_ca{:,:},...
     'RowName', [],...
     'ColumnName',{'BC Number',...
@@ -741,9 +743,11 @@ uitable('Data',Ratios_BC_with_ca{:,:},...
     'All Inhibitory Neurons to BC'},...
     'Units', 'Normalized',...
     'Position',[0, 0, 1, 1]);
-%% Voltage 
+%% Voltage Recordings
 
-g = fullfile('/Users','melisagumus','Documents','other','pvbasket',{...
+g = fullfile('~',... # Change this path accordingly 
+    'CA1_SimpleDetailed','Excitatory_Inhibitory_Ratios',...
+    'Network_Clamp_Results','pvbasket',{...
     'pvbasket_332810_1000';...
     'pvbasket_333500_1000';...
     'pvbasket_333776_1000';...
@@ -799,7 +803,7 @@ for i = 1:1:15
     hold on
     title (['BC Number #' num2str(i)]) 
     xlabel('Time (msec)')
-    ylabel('Voltage (mV)')
+    ylabel('Voltage')
 end 
 
 %%
