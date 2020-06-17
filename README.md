@@ -22,7 +22,7 @@ This repository includes several folders listed below; each contains scripts for
 
 _**Note:** IPSCs and EPSCs in detailed model obtained from Network Clamp are saved as .dat files and can be found in /Excitatory_Inhibitory_Ratios/Network_Clamp_Results/mytrace_'cell_ID'_syns.dat. The voltage recordings for each cell can be found in /Excitatory_Inhibitory_Ratios/Network_Clamp_Results/mytrace_'cell_ID'_soma.dat_
 
-2. **Anton's stuff (another repository)**
+2. **Anton's stuff (another repository) - CA1_Minimal_Model_Hetero**
 
 
 
