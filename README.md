@@ -13,7 +13,7 @@ This repository includes several folders listed below; each contains scripts for
 
 1. **Excitatory_Inhibitory_Ratios**
 
-     Excitatory and inhibitory currents, that each cell receives (specifically, PYR, BC, BiC and AAC) in the detailed model, are obtained using SimTracker and Network Clamp tool (Bezaire et al., 2016). Each simulation was run for 1000 msec. Each script helps you calcualte the followings (Please note that this example is based on PYR cells onlys , but the same concept applies to other cells/scripts):
+     Excitatory and inhibitory currents, that each cell receives (specifically, PYR, BC, BiC and AAC) in the detailed model, are obtained using SimTracker and Network Clamp tool (Bezaire et al., 2016). Each simulation was run for 1000 msec. Each script helps you calculate the following (Please note that this example is based on PYR cells onlys , but the same concept applies to other cells/scripts):
 
      1. Find Mean EPSCs or IPSCs and standard deviation from each cell (e.g. BC, BiC, AAC separately) or combination of cells (e.g. BC and BiC together) onto PYR cells.
      2. Identify the peaks in EPSCs and IPSCs onto PYR, and find the mean and stardard deviation.
