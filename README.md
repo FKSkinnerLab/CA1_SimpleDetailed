@@ -2,7 +2,7 @@
 
 Melisa Gumus - May 2018 
 
-Languages: MATLAB
+Languages: MATLAB, python
 
 <img src="https://github.com/FKSkinnerLab/CA1_SimpleDetailed/blob/master/SimpleDetailedMovie.gif" height="300px" width="500px" >
 
