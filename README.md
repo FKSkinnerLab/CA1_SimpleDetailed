@@ -7,13 +7,13 @@ Languages: MATLAB
 <img src="https://github.com/FKSkinnerLab/CA1_SimpleDetailed/blob/master/SimpleDetailedMovie.gif" height="300px" width="500px" >
 
 ## Summary ##
-This github repository includes complete scripts for comparing the minimal (Ferguson et al., 2017) and the detailed (Beziare et al., 2016) microcircuit models of hippocampus CA1 in terms of theta rhythms generation. For more details, please see Chatzikalymniou and colleagues (2020).
+This github repository includes complete scripts for comparing the minimal (Ferguson et al., 2017) and the detailed (Beziare et al., 2016) microcircuit models of hippocampus CA1 in terms of theta rhythm generation. For more details, please see Chatzikalymniou and colleagues (2020).
 
 This repository includes several folders listed below; each contains scripts for a specific purpose and calculations. 
 
 1. **Excitatory_Inhibitory_Ratios**
 
-     Excitatory and inhibitory currents, that each cell receives (specifically, PYR, BC, BiC and AAC) in the detailed model, are obtained using SimTracker and Network Clamp tool (Bezaire et al., 2016). Each simulation was run for 1000 msec. Each scripts helps you calcualte the followings (Please note that this example is based on PYR cells onlys , but the same concept applies to other cells/scripts):
+     Excitatory and inhibitory currents, that each cell receives (specifically, PYR, BC, BiC and AAC) in the detailed model, are obtained using SimTracker and Network Clamp tool (Bezaire et al., 2016). Each simulation was run for 1000 msec. Each script helps you calcualte the followings (Please note that this example is based on PYR cells onlys , but the same concept applies to other cells/scripts):
 
      1. Find Mean EPSCs or IPSCs and standard deviation from each cell (e.g. BC, BiC, AAC separately) or combination of cells (e.g. BC and BiC together) onto PYR cells.
      2. Identify the peaks in EPSCs and IPSCs onto PYR, and find the mean and stardard deviation.
@@ -37,9 +37,9 @@ Download a copy of the repo somewhere locally by running:
 
 
 ## Contact ##
-If there are any difficulties or errors in running any of the scripts or somethings is unclear, please feel to contact me at melisa.gumus@mail.utoronto.ca.
+If there are any difficulties or errors in running any of the scripts or something is unclear, please feel to contact me at melisa.gumus@mail.utoronto.ca.
 
-Project link: https://github.com/FKSkinnerLab/CA1_SimpleDetailed. To give credits, please mention this GitHub repository by the name and the link.
+Project link: https://github.com/FKSkinnerLab/CA1_SimpleDetailed. To give credit, please mention this GitHub repository by the name and the link.
 
 
 ## References ##
