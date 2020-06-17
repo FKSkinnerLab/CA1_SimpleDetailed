@@ -1,4 +1,4 @@
-# Linking Simple and Detailed Hippocampal CA1 Networks
+# Linking Minimal and Detailed Hippocampal CA1 Networks
 
 Melisa Gumus - May 2018 
 
@@ -7,7 +7,7 @@ Languages: MATLAB
 <img src="https://github.com/FKSkinnerLab/CA1_SimpleDetailed/blob/master/SimpleDetailedMovie.gif" height="300px" width="500px" >
 
 ## Summary ##
-This github repository includes complete scripts for comparing the simple (Ferguson et al., 2017) and the detailed (Beziare et al., 2016) microcircuit models of hippocampus CA1 in terms of theta rhythms generation. For more details, please see Chatzikalymniou and colleagues (2020).
+This github repository includes complete scripts for comparing the minimal (Ferguson et al., 2017) and the detailed (Beziare et al., 2016) microcircuit models of hippocampus CA1 in terms of theta rhythms generation. For more details, please see Chatzikalymniou and colleagues (2020).
 
 This repository includes several folders listed below; each contains scripts for a specific purpose and calculations. 
 
