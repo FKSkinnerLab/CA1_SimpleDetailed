@@ -1,8 +1,8 @@
 # Linking Minimal and Detailed Hippocampal CA1 Networks
 
-Melisa Gumus - May 2018 (uploaded June 2020)
-Anton Lunyov - uploaded June 2020
-Frances Skinner - various edits
+Melisa Gumus - May 2018 (uploaded June 2020); 
+Anton Lunyov - uploaded June 2020; 
+Frances Skinner - various edits.
 
 Languages: MATLAB, python
 
